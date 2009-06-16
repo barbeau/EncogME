@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsclientconfig serviceType="class" version="1.0">
+    <client>
+        <project>EncogJavaME</project>
+        <class location="${src.dir}" type="javaMEDemo.wc.WebToMobileClient"/>
+        <property name="DataBinding" value="false"/>
+        <property name="floatingPoint" value="true"/>
+        <property name="createStubs" value="true"/>
+    </client>
+    <server>
+        <project path="D:\Users\Sean\Documents\USF Grad School\Data Mining\wsEncogResults">wsEncogResults</project>
+        <class location="${src.dir}" mapping="" type="org.encog.util.db.javaMETests.servlets.WebToMobileServlet"/>
+    </server>
+    <services>
+        <service>
+            <class type="org.encog.util.db.javaMETests.ws.SubmitResults">
+                <method name="saveResult">
+                    <return type="boolean"/>
+                    <param name="result" type="org.encog.util.db.javaMETestsServer.TestResult"/>
+                </method>
+                <method name="getModel">
+                    <return type="java.lang.Double[]"/>
+                    <param name="id" type="int"/>
+                </method>
+            </class>
+        </service>
+    </services>
+</wsclientconfig>
