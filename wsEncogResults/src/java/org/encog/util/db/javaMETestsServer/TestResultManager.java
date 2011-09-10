@@ -1,7 +1,20 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
+/**
+Copyright 2010 Sean Barbeau
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+**/
 package org.encog.util.db.javaMETestsServer;
 
 import java.sql.Connection;
@@ -21,6 +34,12 @@ public class TestResultManager {
 
     Connection dbConnection;
     boolean useGlassfishPool = false;  //This varables is set to define whether the manager uses the Glassfish connection pool, or manages its own connections
+    String userName = ""; //add your database username here
+    String password = "";  //add your password for your database here
+    String serverName = "";  //add your server name for your database here
+    int portNumber = 0;  //Add your port number for your database here
+    String databaseName = ""; //Add your database name here
+
 
     public TestResultManager(boolean useGlassfishPool) {
         this.useGlassfishPool = useGlassfishPool;
@@ -28,7 +47,7 @@ public class TestResultManager {
         try {
             if (!useGlassfishPool) {
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-                dbConnection = DriverManager.getConnection("jdbc:sqlserver://USF242601.CUTR.USF.EDU:1433;databasename= DMStorage;User= dmUser;Password= dmUser1!@#;SelectMethod=direct;");
+                dbConnection = DriverManager.getConnection("jdbc:sqlserver://" + serverName + ":" + portNumber + ";databasename= " + databaseName + ";User= " + userName + ";Password= " + password + ";SelectMethod=direct;");
             } else {
                 //Use Glassfish connection pool
                 javax.naming.InitialContext ic  = new javax.naming.InitialContext();
