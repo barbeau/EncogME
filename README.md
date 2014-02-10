@@ -1,19 +1,19 @@
 Encog Micro Edition
 ====================
 
-## OVERVIEW
+### OVERVIEW
 
 A port of the Encog neural network project to Java Micro Edition, 
 as well as supporting server-side projects that allow a neural network 
 to be trained server-side, and then have the trained model extracted and 
 transferred to the mobile phone for neural net execution in real-time on the mobile device.
 
-## PROJECT ARCHITECTURE
+### PROJECT ARCHITECTURE
 
 Details about the Encog ME architecture are available on the website:
 https://github.com/barbeau/EncogME/wiki
 
-## All projects 
+### All projects 
 
 1. **EncogCoreJavaME** - Core neural net code ported to Java Micro Edition
 2. **EncogDesktop** - Testing desktop app used to produce neural net training and testing times in an desktop environment 
