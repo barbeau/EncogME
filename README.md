@@ -20,8 +20,3 @@ https://github.com/barbeau/EncogME/wiki
 3. **EncogJavaMEApp** - Java ME app, which implements a GUI and network communication with server on top of EncogCoreJavaME
 4. **EncogModelGenerator** - Destkop software used to train a neural network and store the trained model as XML in a database
 5. **wsEncogResults** - Glassfish web app project, which receives requests from EncogJavaMEApp for trained neural net models, retrieved the trained models from the database, and returns them to the mobile app
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/barbeau/encogme/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
